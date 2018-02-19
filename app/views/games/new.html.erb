@@ -1,0 +1,10 @@
+<% @letters.each do |letter| %>
+  <ul id="letters-list">
+   <li><%= letter %></li>
+  </ul>
+<% end %>
+<form action="/score" method="post">
+   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input id="response" type="text" name="response" placeholder="Your word here!">
+  <button class="response-submit" type="submit" value="response" data-confirm="C'est ton dernier mot?">Play!</button>
+</form>

@@ -1,0 +1,11 @@
+
+<% if @result["found"] == true && @exist %>
+    <p>Congratulations! <strong><%= @word.upcase %></strong> is a valid English word...</p>
+  <% elsif @result["found"] == false %>
+    <p>Sorry but <strong><%= @word.upcase %></strong> does not seem to be a valid English word...</p>
+  <% else %>
+    <p>Sorry but <strong><%= @word.upcase %></strong> can't be built of</p>
+    <ul id="letters-list">
+      <li><%= letter %></li>
+    </ul>
+<% end %>
